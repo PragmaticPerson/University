@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <audiences audience_id='1' number='101' capacity='29' deleted='false'/>
+    <audiences audience_id='2' number='102' capacity='40' deleted='false'/>
+    <audiences audience_id='3' number='103' capacity='40' deleted='false'/>
+    <audiences audience_id='4' number='104' capacity='20' deleted='false'/>
+    <audiences audience_id='5' number='105' capacity='36' deleted='false'/>
+    <audiences audience_id='6' number='106' capacity='50' deleted='false'/>
+    <audiences audience_id='7' number='107' capacity='60' deleted='false'/>
+    <audiences audience_id='8' number='108' capacity='100' deleted='false'/>
+</dataset>

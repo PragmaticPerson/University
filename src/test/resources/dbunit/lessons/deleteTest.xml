@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <lessons lesson_id='1' group_id='1' teacher_id='1' day='MONDAY' lesson_number='FIRST' duration='90' audience_id='1' subject_id='2' />
+    <lessons lesson_id='2' group_id='1' teacher_id='4' day='MONDAY' lesson_number='SECOND' duration='90' audience_id='1' subject_id='1' />
+    <lessons lesson_id='3' group_id='2' teacher_id='2' day='MONDAY' lesson_number='FIRST' duration='60' audience_id='2' subject_id='1' />
+    <lessons lesson_id='4' group_id='2' teacher_id='5' day='MONDAY' lesson_number='THIRD' duration='90' audience_id='5' subject_id='10' />
+    <lessons lesson_id='6' group_id='1' teacher_id='1' day='WEDNESDAY' lesson_number='FIRST' duration='60' audience_id='1' subject_id='2' />
+    <lessons lesson_id='7' group_id='1' teacher_id='5' day='WEDNESDAY' lesson_number='FOURTH' duration='90' audience_id='2' subject_id='1' />
+    <lessons lesson_id='8' group_id='3' teacher_id='4' day='WEDNESDAY' lesson_number='FIRST' duration='60' audience_id='4' subject_id='6' />
+    <lessons lesson_id='9' group_id='3' teacher_id='2' day='WEDNESDAY' lesson_number='SECOND' duration='90' audience_id='3' subject_id='9' />
+</dataset>

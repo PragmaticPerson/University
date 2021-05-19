@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <students student_id='1' first_name='Name1' last_name='Surname1' group_id='1' deleted='false' />
+    <students student_id='2' first_name='Name2' last_name='Surname2' group_id='1' deleted='false' />
+    <students student_id='3' first_name='Name3' last_name='Surname3' group_id='2' deleted='false' />
+    <students student_id='4' first_name='Name4' last_name='Surname4' group_id='3' deleted='false' />
+    <students student_id='5' first_name='TestName1' last_name='TestSurname1' group_id='4' deleted='false' />
+    <students student_id='6' first_name='TestName2' last_name='TestSurname2' group_id='1' deleted='false' />
+</dataset>

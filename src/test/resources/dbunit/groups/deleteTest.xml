@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <groups group_id='1' group_name='Group1' faculty_id='1' deleted='true' />
+    <groups group_id='2' group_name='Group2' faculty_id='1' deleted='false' />
+    <groups group_id='3' group_name='Group3' faculty_id='2' deleted='false' />
+    <groups group_id='4' group_name='Group4' faculty_id='2' deleted='false' />
+</dataset>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <faculty faculty_id='1' faculty_name='ChangedFacultyName' dean_firstname='ChangedName' dean_lastname='ChangedSurname' deleted='false' />
+    <faculty faculty_id='2' faculty_name='FacultyName2' dean_firstname='Name2' dean_lastname='Surname2' deleted='false' />
+</dataset>

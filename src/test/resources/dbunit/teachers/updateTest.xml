@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <teachers teacher_id='1' first_name='Name1' last_name='Surname1' deleted='false' />
+    <teachers teacher_id='2' first_name='Name2' last_name='Surname2' deleted='false' />
+    <teachers teacher_id='3' first_name='Name3' last_name='Surname3' deleted='false' />
+    <teachers teacher_id='4' first_name='TestName' last_name='TestSurname' deleted='false' />
+    <teachers teacher_id='5' first_name='Name5' last_name='Surname5' deleted='false' />
+</dataset>

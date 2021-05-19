@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="UTF-8">
+<title>Error</title>
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="d-block">
+                <ul class="list-inline nav me-auto mb-2">
+                    <li class="list-inline-item nav-item"><span class="navbar-brand">University</span></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/groups/get-all">Groups</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/students/get-all">Students</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/teachers/get-all">Teachers</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/subjects/get-all">Subjects</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link active"
+                        href="/audiences/get-all">Audiences</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/faculties/get-all">Faculties</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <h3>Ooops... Something went wrong</h3>        
+        </div>
+        <div>
+            <div th:if="${error != null}">
+              <div class="p-4 mb-2 bg-warning text-dark">
+                  <span th:text="${error}"></span><br>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

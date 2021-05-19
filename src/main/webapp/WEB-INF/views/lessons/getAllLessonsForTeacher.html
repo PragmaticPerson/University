@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Show all Audiences</title>
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="d-block">
+                <ul class="list-inline nav me-auto mb-2">
+                    <li class="list-inline-item nav-item"><span class="navbar-brand">University</span></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/groups/get-all">Groups</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/students/get-all">Students</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/teachers/get-all">Teachers</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/subjects/get-all">Subjects</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/audiences/get-all">Audiences</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/faculties/get-all">Faculties</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col mx-2 my-3">
+                <div class="position-absolute d-flex">
+                    <a class="btn btn-primary" href="/lessons/add">Add lesson</a>
+                </div>
+                <div class="text-center">
+                    <h3>All lessons for <span th:text="${source}"></span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="d-block m-auto" th:each="currDay : ${days}">
+            <div class="row">
+                <div class="col mx-1 my-2 text-center">
+                    <h4 th:text="${currDay}"></h4>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead class="px-5">
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Group</th>
+                        <th scope="col">duration</th>
+                        <th scope="col">Audience</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="px-5">
+                    <tr th:if="${#lists.isEmpty(lessons.?[day.equals(#vars.currDay)])}">
+                        <td colspan="8" class="text-center">No lessons available</td>
+                    </tr>
+                    <tr th:each="lesson : ${lessons.?[day.equals(#vars.currDay)]}">
+                        <td><span th:text="${lesson.lessonNumber}"></span></td>
+                        <td><span th:text="${lesson.group.name}"></span></td>
+                        <td><span th:text="${lesson.duration}"></span></td>
+                        <td><span th:text="${lesson.audience.number}"></span></td>
+                        <td><span th:text="${lesson.subject.name}"></span></td>
+                        <td class="d-inline-flex">
+                            <form class="pr-1" action="#" th:action="@{/lessons/delete}" th:object="${currLesson}" method="post">
+                                <input type="hidden" th:value="${lesson.id}" name="id" />
+                                
+                                <a class="btn btn-primary" th:href="@{/lessons/get(id=${lesson.id})}">Edit</a>
+                                <input class="btn btn-danger" type="submit" value="Delete" name="delete"/>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

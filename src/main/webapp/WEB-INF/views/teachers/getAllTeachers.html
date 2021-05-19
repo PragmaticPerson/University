@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Show all Teachers</title>
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="d-block">
+                <ul class="list-inline nav me-auto mb-2">
+                    <li class="list-inline-item nav-item"><span class="navbar-brand">University</span></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/groups/get-all">Groups</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/students/get-all">Students</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link active"
+                        href="/teachers/get-all">Teachers</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/subjects/get-all">Subjects</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/audiences/get-all">Audiences</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/faculties/get-all">Faculties</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col mx-2 my-3">
+                <div class="position-absolute d-flex">
+                    <a class="btn btn-primary" href="/teachers/add">Add teacher</a>
+                </div>
+                <div class="text-center">
+                    <h3>All teachers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="d-block m-auto">
+            <div th:if="${#lists.isEmpty(teachers)}">
+                <h3>No teachers available</h3>
+            </div>
+            <div class="container p-2" th:each="teacher : ${teachers}">
+                <div class="d-inline-flex m-auto text-center">
+                    <h4 class="m-2" th:text="${teacher.name + ' ' + teacher.surname}"></h4>
+                    <div class="m-2">
+                       <a class="btn btn-primary" th:href="@{/teachers/get?id={id}(id=${teacher.id})}">Edit</a>
+                       <a class="btn btn-success" th:href="@{/lessons/by-teacher?id={id}(id=${teacher.id})}">Timetable</a>
+                    </div>
+                </div>
+                <div class="container my-2">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+		                    <tr th:if="${#lists.isEmpty(teacher.subjects)}">
+		                        <td colspan="2" class="text-center">This teacher doesn't have subjects</td>
+		                    </tr>
+		                    <tr th:each="subject, stat : ${teacher.subjects}">
+		                        <th class="w-25" scope="row">
+	                                <span th:text="${subject.id}"></span>
+                                </th>
+                                <td class="w-50">
+                                    <span th:text="${subject.name}"></span>
+                                </td>
+                                <td>
+                                    <form action="#" th:action="@{/teachers/get-all}" method="post">
+                                        <input type="hidden" th:value="${#vars.teacher.subjects[__${stat.index}__].id}" name="subjectId" />
+                                        <input type="hidden" th:value="${teacher.id}" name="teacherId" />
+                                        
+                                        <input class="btn btn-danger" type="submit" value="Delete" name="delete"/>
+                                    </form>
+                                </td>
+		                    </tr>
+		                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

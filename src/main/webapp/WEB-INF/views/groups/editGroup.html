@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Edit Audience</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar bg-light">
+            <div class="d-block">
+                <ul class="list-inline nav me-auto mb-2">
+                    <li class="list-inline-item nav-item"><span class="navbar-brand">University</span></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link active"
+                        href="/groups/get-all">Groups</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/students/get-all">Students</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/teachers/get-all">Teachers</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/subjects/get-all">Subjects</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/audiences/get-all">Audiences</a></li>
+                    <li class="list-inline-item nav-item"><a class="nav-link"
+                        href="/faculties/get-all">Faculties</a></li>
+                </ul>
+            </div>
+        </nav>
+		<h2 class="text-center my-4">Edit Group</h2>
+        <div>
+            <div th:if="${error != null}">
+              <div class="p-3 mb-2 bg-warning text-dark">
+                  <span th:text="${error}"></span><br>
+              </div>
+            </div>
+        </div>
+		<div class="d-flex justify-content-center m-3">
+			<form class="w-50" action="#" th:action="@{/groups/get}" th:object="${group}" method="post">
+				<div class="form-group row">
+                    <label class="col">Id:</label>
+                    <input class="col form-control-plaintext" type="text" th:field="*{id}" readonly/>
+                </div>
+                <div class="form-group row">
+                    <label class="col">Name</label>
+                    <input class="col" type="text" th:field="*{name}" />
+                    
+                </div>
+                <div class="form-group row">
+                    <label class="col">Faculty:</label>
+                    <select class="col" th:field="*{faculty.id}">
+                       <option th:each="fac : ${faculties}" th:value="${fac.id}" th:text="${fac.name}"></option>
+                     </select>
+                </div>
+                <div class="form-group row">
+                    <input class="btn m-1 btn-success col" name="save" type="submit" value="Save" />
+                    <input class="btn m-1 btn-danger col" name="delete" type="submit" value="Delete" />
+                </div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <teachers_subjects teacher_id='1' subject_id='2' />
+    <teachers_subjects teacher_id='1' subject_id='5' />
+    <teachers_subjects teacher_id='1' subject_id='6' />
+    <teachers_subjects teacher_id='2' subject_id='1' />
+    <teachers_subjects teacher_id='2' subject_id='8' />
+    <teachers_subjects teacher_id='2' subject_id='10' />
+    <teachers_subjects teacher_id='3' subject_id='1' />
+    <teachers_subjects teacher_id='3' subject_id='7' />
+    <teachers_subjects teacher_id='3' subject_id='9' />
+
+    <teachers_subjects teacher_id='4' subject_id='1' />
+    <teachers_subjects teacher_id='4' subject_id='2' />
+    <teachers_subjects teacher_id='4' subject_id='6' />
+    <teachers_subjects teacher_id='4' subject_id='9' />
+    <teachers_subjects teacher_id='5' subject_id='1' />
+    <teachers_subjects teacher_id='5' subject_id='2' />
+    <teachers_subjects teacher_id='5' subject_id='5' />
+
+    <teachers_subjects teacher_id='5' subject_id='8' />
+    <teachers_subjects teacher_id='5' subject_id='10' />
+</dataset>

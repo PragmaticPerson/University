@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <audiences audience_id='1' number='101' capacity='29' deleted='false'/>
+    <audiences audience_id='2' number='102' capacity='40' deleted='false'/>
+    <audiences audience_id='3' number='103' capacity='40' deleted='false'/>
+    <audiences audience_id='4' number='104' capacity='20' deleted='false'/>
+    <audiences audience_id='5' number='105' capacity='36' deleted='false'/>
+    <audiences audience_id='6' number='106' capacity='50' deleted='false'/>
+    <audiences audience_id='7' number='107' capacity='60' deleted='false'/>
+    
+    
+    <faculty faculty_id='1' faculty_name='FacultyName1' dean_firstname='Name1' dean_lastname='Surname1' deleted='false' />
+    <faculty faculty_id='2' faculty_name='FacultyName2' dean_firstname='Name2' dean_lastname='Surname2' deleted='false' />
+    
+    
+    <groups group_id='1' group_name='Group1' faculty_id='1' deleted='false' />
+    <groups group_id='2' group_name='Group2' faculty_id='1' deleted='false' />
+    <groups group_id='3' group_name='Group3' faculty_id='2' deleted='false' />
+    <groups group_id='4' group_name='Group4' faculty_id='2' deleted='false' />
+    
+    <students student_id='1' first_name='Name1' last_name='Surname1' group_id='1' deleted='false' />
+    <students student_id='2' first_name='Name2' last_name='Surname2' group_id='1' deleted='false' />
+    <students student_id='3' first_name='Name3' last_name='Surname3' group_id='2' deleted='false' />
+    <students student_id='4' first_name='Name4' last_name='Surname4' group_id='3' deleted='false' />
+    
+    <teachers teacher_id='1' first_name='Name1' last_name='Surname1' deleted='false' />
+    <teachers teacher_id='2' first_name='Name2' last_name='Surname2' deleted='false' />
+    <teachers teacher_id='3' first_name='Name3' last_name='Surname3' deleted='false' />
+    <teachers teacher_id='4' first_name='Name4' last_name='Surname4' deleted='false' />
+    <teachers teacher_id='5' first_name='Name5' last_name='Surname5' deleted='false' />
+    
+    <subjects subject_id='1' subject_name='Subject1' deleted='false' />
+    <subjects subject_id='2' subject_name='Subject2' deleted='false' />
+    <subjects subject_id='3' subject_name='Subject3' deleted='false' />
+    <subjects subject_id='4' subject_name='Subject4' deleted='false' />
+    <subjects subject_id='5' subject_name='Subject5' deleted='false' />
+    <subjects subject_id='6' subject_name='Subject6' deleted='false' />
+    <subjects subject_id='7' subject_name='Subject7' deleted='false' />
+    <subjects subject_id='8' subject_name='Subject8' deleted='false' />
+    <subjects subject_id='9' subject_name='Subject9' deleted='false' />
+    <subjects subject_id='10' subject_name='Subject10' deleted='false' />
+    
+    <teachers_subjects teacher_id='1' subject_id='2' />
+    <teachers_subjects teacher_id='1' subject_id='5' />
+    <teachers_subjects teacher_id='1' subject_id='6' />
+    <teachers_subjects teacher_id='2' subject_id='1' />
+    <teachers_subjects teacher_id='2' subject_id='3' />
+    <teachers_subjects teacher_id='2' subject_id='8' />
+    <teachers_subjects teacher_id='2' subject_id='10' />
+    <teachers_subjects teacher_id='3' subject_id='1' />
+    <teachers_subjects teacher_id='3' subject_id='7' />
+    <teachers_subjects teacher_id='3' subject_id='9' />
+    <teachers_subjects teacher_id='4' subject_id='1' />
+    <teachers_subjects teacher_id='4' subject_id='2' />
+    <teachers_subjects teacher_id='4' subject_id='6' />
+    <teachers_subjects teacher_id='4' subject_id='9' />
+    <teachers_subjects teacher_id='5' subject_id='1' />
+    <teachers_subjects teacher_id='5' subject_id='2' />
+    <teachers_subjects teacher_id='5' subject_id='5' />
+    <teachers_subjects teacher_id='5' subject_id='8' />
+    <teachers_subjects teacher_id='5' subject_id='10' />
+    
+    <lessons lesson_id='1' group_id='1' teacher_id='1' day='MONDAY' lesson_number='FIRST' duration='90' audience_id='1' subject_id='2' />
+    <lessons lesson_id='2' group_id='1' teacher_id='4' day='MONDAY' lesson_number='SECOND' duration='90' audience_id='1' subject_id='1' />
+    <lessons lesson_id='3' group_id='2' teacher_id='2' day='MONDAY' lesson_number='FIRST' duration='60' audience_id='2' subject_id='1' />
+    <lessons lesson_id='4' group_id='2' teacher_id='5' day='MONDAY' lesson_number='THIRD' duration='90' audience_id='5' subject_id='10' />
+    <lessons lesson_id='5' group_id='3' teacher_id='3' day='TUESDAY' lesson_number='FOURTH' duration='90' audience_id='3' subject_id='9' />
+    <lessons lesson_id='6' group_id='1' teacher_id='1' day='WEDNESDAY' lesson_number='FIRST' duration='60' audience_id='1' subject_id='2' />
+    <lessons lesson_id='7' group_id='1' teacher_id='5' day='WEDNESDAY' lesson_number='FOURTH' duration='90' audience_id='2' subject_id='1' />
+    <lessons lesson_id='8' group_id='3' teacher_id='4' day='WEDNESDAY' lesson_number='FIRST' duration='60' audience_id='4' subject_id='6' />
+    <lessons lesson_id='9' group_id='3' teacher_id='2' day='WEDNESDAY' lesson_number='SECOND' duration='90' audience_id='3' subject_id='9' />
+</dataset>
